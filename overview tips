@@ -1,0 +1,32 @@
+vid 2.1 
+talks about how to change the the selector and the screen pages (home sceeens) for the MAPA and DIRECCIONS from one option to the other. using provider.
+
+2.2
+talks about introducing bdprovider into the screen
+
+2.3
+talks about the continueation of what the dbprovider and adding info like id,tipo and valor (confusion)
+
+
+2.4
+talks about addiing future processes like delete, update, getall,insert etc
+
+2.5
+talks about adding a scanlist provider for listing out shit.
+
+2.6
+
+2.7
+talks about being able to delete inputs in the list menue sliding and tapping the waste bin
+
+2.8
+talks about adding the url launcher for enabling entering sites 
+
+2.9
+talks about adding the map and how to set it up 
+
+2.10
+talks about adding the map props
+
+2.11
+talks about adding the barcode
