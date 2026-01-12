@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:qr_scan/model/scan_model.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -11,29 +12,18 @@ class MapaScreen extends StatefulWidget {
 }
 
 class _MapaScreenState extends State<MapaScreen> {
-  final Completer<GoogleMapController> _controller = Completer();
-
+  Completer<GoogleMapController> _controller = Completer();
   @override
   Widget build(BuildContext context) {
+    final CameraPosition _puntInicial = CameraPosition(
+      target: LatLng(40.689247, -74.044502),
+      zoom: 14.4746,
+    );
     final ScanModel scan =
         ModalRoute.of(context)!.settings.arguments as ScanModel;
-
-    final CameraPosition puntInicial = CameraPosition(
-      target: scan.getLatLng(),
-      zoom: 17,
-      tilt: 50,
-    );
-
     return Scaffold(
       body: GoogleMap(
-        mapType: MapType.normal,
-        initialCameraPosition: puntInicial,
-        markers: {
-          Marker(
-            markerId: const MarkerId('geo-location'),
-            position: scan.getLatLng(),
-          ),
-        },
+        initialCameraPosition: _puntInicial,
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller);
         },
